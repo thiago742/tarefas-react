@@ -1,14 +1,18 @@
 import styled from 'styled-components'
-import { Props } from '.'
 
-type PropsSemLegendaEContador = Omit<Props, 'contador' | 'legenda'>
-
-export const Card = styled.div<PropsSemLegendaEContador>`
+export const Card = styled.div`
   padding: 8px;
-  border: 1px solid ${(props) => (props.ativo ? '#1e90ff' : '#a1a1a1')};
-  background-color: ${(props) => (props.ativo ? '#fff' : '#fcfcfc')};
-  color: ${(props) => (props.ativo ? '#1e90ff' : '#5e5e5e')};
+  border: 1px solid #a1a1a1;
+  background-color: #fcfcfc;
+  color: #5e5e5e;
   border-radius: 8px;
+  cursor: pointer;
+
+  &.ativo {
+    border-color: #1e90ff;
+    background-color: #fff;
+    color: #1e90ff;
+  }
 `
 
 export const Contador = styled.span`
